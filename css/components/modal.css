@@ -1,0 +1,162 @@
+/* ---------- Modal ---------- */
+.modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: var(--sp-4);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  animation: fade-in var(--t-base);
+}
+
+.modal {
+  width: 100%;
+  max-width: 640px;
+  max-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+  animation: pop-in var(--t-base);
+}
+
+.modal--sm {
+  max-width: 420px;
+}
+
+.modal--lg {
+  max-width: 780px;
+}
+
+.modal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modal__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.modal__body {
+  padding: var(--sp-5);
+  overflow-y: auto;
+}
+
+.modal__foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---------- Toast ---------- */
+.toasts {
+  position: fixed;
+  right: var(--sp-5);
+  bottom: var(--sp-5);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-width: 260px;
+  max-width: 360px;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-strong);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  font-size: var(--fs-sm);
+  animation: slide-up var(--t-base);
+}
+
+.toast--danger {
+  border-left-color: var(--color-danger);
+}
+
+.toast svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.toast--danger svg {
+  color: var(--color-danger);
+}
+
+.toast.is-leaving {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--t-base), transform var(--t-base);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* ---------- Skeleton / carga ---------- */
+.loading {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border-strong);
+  border-top-color: var(--color-accent);
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto var(--sp-3);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

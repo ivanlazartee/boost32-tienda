@@ -1,0 +1,76 @@
+/* ==========================================================================
+   BoosT32 — Design tokens
+   Cambiar la marca = cambiar este archivo. Todo el resto lee de acá.
+   ========================================================================== */
+
+:root {
+  /* --- Superficies (negro streetwear) --- */
+  --color-bg: #0a0a0a;
+  --color-surface: #161616;
+  --color-surface-2: #1f1f1f;
+  --color-surface-3: #262626;
+  --color-border: #2a2a2a;
+  --color-border-strong: #3a3a3a;
+
+  /* --- Texto --- */
+  --color-text: #f5f5f5;
+  --color-text-2: #b4b4b4;
+  --color-text-muted: #8a8a8a;
+  --color-text-on-accent: #0a0a0a;
+
+  /* --- Acento: verde ácido --- */
+  --color-accent: #c6ff00;
+  --color-accent-hover: #d4ff3d;
+  --color-accent-soft: rgba(198, 255, 0, 0.12);
+  --color-accent-line: rgba(198, 255, 0, 0.35);
+
+  /* --- Estados (reservados, siempre con texto/ícono) --- */
+  --color-success: #22c55e;
+  --color-success-soft: rgba(34, 197, 94, 0.14);
+  --color-warning: #f59e0b;
+  --color-warning-soft: rgba(245, 158, 11, 0.14);
+  --color-danger: #ef4444;
+  --color-danger-soft: rgba(239, 68, 68, 0.14);
+  --color-info: #60a5fa;
+  --color-info-soft: rgba(96, 165, 250, 0.14);
+
+  /* --- Tipografía --- */
+  --font-display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.625rem;
+  --fs-2xl: 2.125rem;
+
+  /* --- Espaciado (escala de 4px) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+
+  /* --- Radios, sombras, transiciones --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.55);
+  --ring-focus: 0 0 0 3px var(--color-accent-line);
+
+  --t-fast: 120ms ease;
+  --t-base: 200ms ease;
+
+  /* --- Layout --- */
+  --sidebar-w: 248px;
+  --topbar-h: 64px;
+  --content-max: 1400px;
+}

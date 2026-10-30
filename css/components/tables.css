@@ -1,0 +1,144 @@
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  font-size: var(--fs-sm);
+  min-width: 720px;
+}
+
+.table th {
+  text-align: left;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background var(--t-fast);
+}
+
+.table tbody tr:hover {
+  background: var(--color-surface-2);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tr.is-clickable {
+  cursor: pointer;
+}
+
+.table .col-actions {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.row-actions {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.table--compact {
+  min-width: 0;
+}
+
+.table--compact td,
+.table--compact th {
+  padding: 10px var(--sp-5);
+}
+
+/* Celda de producto: foto + nombre */
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-width: 220px;
+}
+
+.product-cell__name {
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.product-cell__meta {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Toolbar sobre la tabla */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.toolbar .field-search {
+  flex: 1 1 240px;
+}
+
+.toolbar__count {
+  margin-left: auto;
+  align-self: center;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Tabs de estado */
+.tabs {
+  display: flex;
+  gap: var(--sp-1);
+  padding: var(--sp-3) var(--sp-4) 0;
+  border-bottom: 1px solid var(--color-border);
+  overflow-x: auto;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3) var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tab.is-active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+.tab__count {
+  font-size: 11px;
+  padding: 0 7px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-3);
+}
+
+.tab.is-active .tab__count {
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+}

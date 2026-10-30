@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="description" content="BoosT32 — Streetwear y sneakers en Tucumán. Nike, Adidas, Vans, Lacoste. Envíos a todo el país y 3 cuotas sin interés." />
+    <title>BoosT32 · Streetwear & Sneakers</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c6ff00'/%3E%3Ctext x='16' y='22' font-family='Arial Black' font-size='14' text-anchor='middle' fill='%230a0a0a'%3EB%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/store.css" />
+  </head>
+  <body>
+    <!-- Barra de anuncios -->
+    <div class="announce" aria-label="Beneficios">
+      <div class="announce__track">
+        <span>3 cuotas sin interés</span>
+        <span>15% off pagando con transferencia</span>
+        <span>Envío gratis desde $150.000</span>
+        <span>Cambios sin cargo dentro de los 30 días</span>
+        <span>3 cuotas sin interés</span>
+        <span>15% off pagando con transferencia</span>
+        <span>Envío gratis desde $150.000</span>
+        <span>Cambios sin cargo dentro de los 30 días</span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__inner">
+        <button class="header-btn header__burger" id="burger" aria-label="Abrir menú" data-icon="menu"></button>
+        <a href="#/" class="logo" aria-label="BoosT32, ir al inicio">BOOST<span>32</span></a>
+
+        <nav class="menu" id="menu" aria-label="Categorías"></nav>
+
+        <div class="header__actions">
+          <button class="header-btn" id="search-btn" aria-label="Buscar" aria-expanded="false" data-icon="search"></button>
+          <button class="header-btn" id="cart-btn" aria-label="Abrir carrito">
+            <span data-icon="bag"></span>
+            <span class="cart-count" id="cart-count" hidden>0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-bar" id="search-bar" hidden>
+        <form class="container" id="search-form" role="search">
+          <input class="input" type="search" name="q" placeholder="Buscá zapatillas, buzos, marcas…" aria-label="Buscar productos" />
+          <button class="btn btn--primary" style="height: 46px">Buscar</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Menú mobile -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="mobile-nav__head">
+        <span class="logo">BOOST<span>32</span></span>
+        <button class="header-btn" id="mobile-close" aria-label="Cerrar menú" data-icon="x"></button>
+      </div>
+      <nav id="mobile-menu" aria-label="Categorías"></nav>
+    </div>
+
+    <main id="view" tabindex="-1"></main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a href="#/" class="logo">BOOST<span>32</span></a>
+          <p class="text-sm text-2" style="margin: var(--sp-3) 0 var(--sp-4); max-width: 300px">
+            Streetwear y sneakers originales. Desde Tucumán para todo el país.
+          </p>
+          <div class="payments" aria-label="Medios de pago">
+            <span>MERCADO PAGO</span><span>VISA</span><span>MASTER</span><span>TRANSFERENCIA</span>
+          </div>
+        </div>
+        <div>
+          <p class="footer__title">Tienda</p>
+          <ul class="footer__list" id="footer-cats"></ul>
+        </div>
+        <div>
+          <p class="footer__title">Ayuda</p>
+          <ul class="footer__list">
+            <li><a href="#/ayuda?tema=envios">Envíos y entregas</a></li>
+            <li><a href="#/ayuda?tema=cambios">Cambios y devoluciones</a></li>
+            <li><a href="#/ayuda?tema=talles">Guía de talles</a></li>
+            <li><a href="#/ayuda?tema=pagos">Medios de pago</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Local</p>
+          <ul class="footer__list" id="footer-contact"></ul>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> BoosT32 · Todos los derechos reservados</span>
+        <a href="admin/" class="link-more">Panel de administración</a>
+      </div>
+    </footer>
+
+    <a class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" data-icon="whatsapp"></a>
+
+    <script type="module" src="js/store/main.js"></script>
+  </body>
+</html>

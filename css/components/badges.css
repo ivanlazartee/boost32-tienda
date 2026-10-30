@@ -1,0 +1,92 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--color-surface-3);
+  color: var(--color-text-2);
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge--plain::before {
+  display: none;
+}
+
+.badge--success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.badge--danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.badge--info {
+  background: var(--color-info-soft);
+  color: var(--color-info);
+}
+
+.badge--accent {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* Etiqueta de marca (Nike, Adidas…) */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-2);
+}
+
+/* Chips de talle */
+.sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.size {
+  min-width: 28px;
+  padding: 2px 6px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--color-surface-3);
+  color: var(--color-text-2);
+}
+
+.size.is-out {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.size.is-low {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}

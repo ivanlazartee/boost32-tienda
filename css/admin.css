@@ -1,0 +1,22 @@
+/* ==========================================================================
+   BoosT32 — Panel de administración
+   Punto de entrada de estilos. Cada parte vive en su propio archivo.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap");
+
+@import "base/variables.css";
+@import "base/reset.css";
+@import "base/typography.css";
+
+@import "layout/admin-layout.css";
+
+@import "components/buttons.css";
+@import "components/cards.css";
+@import "components/badges.css";
+@import "components/tables.css";
+@import "components/forms.css";
+@import "components/modal.css";
+@import "components/media.css";
+
+@import "pages/dashboard.css";
