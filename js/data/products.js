@@ -243,7 +243,7 @@ export const products = [
     price: 44999,
     comparePrice: null,
     color: "Blanco",
-    image: "oxbix0AlxrQ",
+    image: "zBi6aKsmo9M",
     stock: { S: 5, M: 9, L: 8, XL: 4, XXL: 2 },
     sold: 102,
     active: true,
